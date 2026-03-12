@@ -1,0 +1,23 @@
+name = "unipay-worker"
+main = "src/index.ts"
+compatibility_date = "2024-02-08"
+
+# [vars]
+# FIREBASE_PROJECT_ID = "..."
+
+# [[durable_objects.bindings]]
+# name = "TRANSACTION_LOCK"
+# class_name = "TransactionLock"
+
+# [[migrations]]
+# tag = "v1"
+# new_classes = ["TransactionLock"]
+
+# [[queues.producers]]
+# queue = "unipay-async-tasks"
+# binding = "ASYNC_TASKS"
+
+# [hyperdrive]
+# [[hyperdrive.bindings]]
+# binding = "DB"
+# id = "..."
