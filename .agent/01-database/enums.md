@@ -39,7 +39,7 @@ CREATE TYPE transaction_type AS ENUM (
     'p2p_transfer',        -- Student-to-Student or Staff-to-Student transfers
     'bank_topup',          -- Money enters personal wallet via bank/gateway
     'merchant_settlement', -- Nightly sweep to merchant's real-world bank account
-    'refund'               -- Reversal of a previous payment
+    'refund'              -- Reversal of a previous payment
     'withdrawal'           -- NEW: Money leaving the UniPay ecosystem (e.g., manual refunds)
 );
 
