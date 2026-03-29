@@ -36,11 +36,12 @@ CREATE TYPE wallet_status AS ENUM (
 -- The Event Ledger (What happened?)
 CREATE TYPE transaction_type AS ENUM (
     'purchase',            -- User pays any merchant (canteen, bookstore, etc.)
+    'preorder',       -- users preoder from the canteen when they preorder
     'p2p_transfer',        -- Student-to-Student or Staff-to-Student transfers
     'bank_topup',          -- Money enters personal wallet via bank/gateway
     'merchant_settlement', -- Nightly sweep to merchant's real-world bank account
-    'refund'              -- Reversal of a previous payment
-    'withdrawal'           -- NEW: Money leaving the UniPay ecosystem (e.g., manual refunds)
+    'refund'              -- Reversal of a previous payment (Merchant to user, a feature that merchants have)
+    'admin_adjustment'         -- admin can put money to any wallet from his wallet and also take money from any wallet that is closed
 );
 
 -- The Event Lifecycle (What state is it in?)
